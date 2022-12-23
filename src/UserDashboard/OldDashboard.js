@@ -1,9 +1,9 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-import Login from './Login';
-import Registration from './Registration';
+import UserLoginForm from './UserLoginForm';
+import UserRegistrationForm from './UserRegistrationForm';
 
-const Dashboard = () => {
+const OldDashboard = () => {
     const users = useSelector(state => state.allUsers.users)
     const user = useSelector(state => state.allUsers.user)
     const dispatch = useDispatch();
@@ -16,7 +16,7 @@ const Dashboard = () => {
                     {
                         users.map(user => <div key={user.id}> {user.name} - {user.username} </div>)
                     }
-                    <Registration />
+                    <UserRegistrationForm />
                 </div>
                 <div className='col-md-6'>
                     {
@@ -25,7 +25,7 @@ const Dashboard = () => {
                                 type="button"
                                 value="Logout"
                                 onClick={() => dispatch({ type: 'LOGOUT' })} />
-                            : <Login />
+                            : <UserLoginForm />
                     }
                 </div>
             </div>
@@ -33,4 +33,4 @@ const Dashboard = () => {
     );
 }
 
-export default Dashboard;
+export default OldDashboard;

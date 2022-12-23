@@ -4,7 +4,7 @@ import Home from './components/Home';
 import ErroPage from './components/ErrorPage';
 
 //Login and Registration Dashboard Part
-import Dashboard from './dashboard/Dashboard';
+import Register from './UserDashboard/Register';
 
 //Products Part
 import ProductListing from "./Products/ProductListing";
@@ -20,7 +20,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="/register" element={<Register />} />
           <Route path="/productlisting" element={<ProductListing />} />
           <Route path="/product/:productId" element={<ProductDetails />} />
           <Route path="/productcomponent" element={<ProductComponent />} />
