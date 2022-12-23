@@ -11,3 +11,41 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.myNavi {
+  display: flex;
+  gap: 30px;
+}
+
+.myNavi li {
+  list-style-type: none;
+  text-decoration: none !important;
+  padding: 20px 10px;
+}
+
+.myNavi li a {
+  list-style-type: none;
+  text-decoration: none !important;
+}
+
+.custom--forms label,
+.custom--forms input {
+  width: 100%;
+  float: left;
+  text-align: left;
+}
+
+.custom--forms input {
+  margin-bottom: 15px;
+}
+
+.custom--forms .card li {
+  list-style: none;
+}
+
+.custom--forms .card li span {
+  width: 100%;
+  float: left;
+  text-align: left;
+  padding: 5px 0px;
+}
