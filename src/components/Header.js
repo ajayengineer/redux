@@ -15,7 +15,10 @@ const Header = () => {
                             <li>Products</li>
                         </NavLink>
                         <NavLink to="/register">
-                            <li>Login/Register</li>
+                            <li>User Register</li>
+                        </NavLink>
+                        <NavLink to="/adminregister">
+                            <li>Register as Admin</li>
                         </NavLink>
                     </ul>
                 </nav>

@@ -2,6 +2,7 @@ import { ActionTypes } from "../constants/action-types";
 const intialState = {
   products: [],
   users: [],
+  adminusers: [],
 };
 
 export const productsReducer = (state = intialState, { type, payload }) => {
@@ -43,6 +44,31 @@ export const loginReducer = (state = intialState, action) => {
       return {
         ...state,
         user: null
+      }
+
+    default:
+      return state;
+  }
+};
+
+export const AdminloginReducer = (state = intialState, action) => {
+  switch (action.type) {
+    case ActionTypes.ADMINREGISTER:
+      return {
+        ...state,
+        adminusers: [...state.adminusers, action.payload]
+      }
+
+    case ActionTypes.ADMINLOGIN:
+      return {
+        ...state,
+        adminuser: action.payload
+      }
+
+    case ActionTypes.ADMINLOGOUT:
+      return {
+        ...state,
+        adminuser: null
       }
 
     default:

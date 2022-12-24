@@ -2,18 +2,19 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 
-const UserLogin = () => {
+const AdminLogin = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const dispatch = useDispatch();
-    const users = useSelector(state => state.allUsers.users)
+    const dispatchAdmin = useDispatch();
+    const adminusers = useSelector(state => state.allAdminUsers.adminusers)
 
     const login = () => {
-        const payload = users.find(user => user.username === username && user.password === password)
+        const payload = adminusers.find(user => user.username === username && user.password === password)
 
         if (payload) {
-            dispatch({
-                type: "LOGIN",
+            dispatchAdmin({
+                type: "ADMINLOGIN",
                 payload
             })
             alert('Successfully Logged In!!');
@@ -23,10 +24,10 @@ const UserLogin = () => {
     }
     return (
         <div className='row py-5'>
-            <h2 className='text-dark text-center py-2'>User Login/Register</h2>
+            <h2 className='text-dark text-center py-2'>Admin Login/Register</h2>
             <form>
                 <div class="mb-3">
-                    <label class="form-label">User Name</label>
+                    <label class="form-label">Admin User Name</label>
                     <input
                         class="form-control"
                         type="text"
@@ -36,7 +37,7 @@ const UserLogin = () => {
                     <div id="emailHelp" class="form-text text-dark">We'll never share your email with anyone else.</div>
                 </div>
                 <div class="mb-3">
-                    <label class="form-label">Password</label>
+                    <label class="form-label">Admin Password</label>
                     <input
                         class="form-control"
                         type="password"
@@ -47,11 +48,11 @@ const UserLogin = () => {
                 <button type="submit" class="btn btn-primary col-md-4" value="Login" onClick={login}>Submit</button>
             </form>
             <div className='container mt-5'>
-                <p>Don't have an Account?</p>
-                <NavLink to="/register" className="btn btn-success col-md-4 mb-3">User Register</NavLink>
+                <p>Don't have an Account? Please Register as Admin</p>
+                <NavLink to="/adminregister" className="btn btn-success col-md-4 mb-3">Admin Register</NavLink>
             </div>
         </div>
     )
 }
 
-export default UserLogin;
+export default AdminLogin;
