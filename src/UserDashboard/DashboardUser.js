@@ -7,7 +7,7 @@ const DashboardUser = () => {
                 <h2 className='text-dark text-center py-2'>User Dashboard</h2>
                 <div class="col-md-3 card text-center">
                     <div class="card-header">
-                        Featured
+                        Balance Summary
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Special title treatment</h5>
@@ -20,7 +20,7 @@ const DashboardUser = () => {
                 </div>
                 <div class="col-md-3 card text-center">
                     <div class="card-header">
-                        Featured
+                        Income
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Special title treatment</h5>
@@ -33,7 +33,48 @@ const DashboardUser = () => {
                 </div>
                 <div class="col-md-3 card text-center">
                     <div class="card-header">
-                        Featured
+                        Expenses
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        2 days ago
+                    </div>
+                </div>
+            </div>
+            <div className='row flex-row  justify-content-evenly my-5'>
+                <div class="col-md-3 card text-center">
+                    <div class="card-header">
+                        Recent Transactions
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        2 days ago
+                    </div>
+                </div>
+                <div class="col-md-3 card text-center">
+                    <div class="card-header">
+                        Credit cards
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Special title treatment</h5>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                    <div class="card-footer text-muted">
+                        2 days ago
+                    </div>
+                </div>
+                <div class="col-md-3 card text-center">
+                    <div class="card-header">
+                        Loans
                     </div>
                     <div class="card-body">
                         <h5 class="card-title">Special title treatment</h5>
